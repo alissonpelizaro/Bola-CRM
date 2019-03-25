@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'localhost/licencas';
-$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME']."/licencas/";
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME']."/Bola_CRM/";
 
 
 /*
