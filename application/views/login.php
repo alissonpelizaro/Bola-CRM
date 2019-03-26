@@ -18,7 +18,7 @@
                 </div>
                 <div class="card-body">
                   <div class="tab-content">
-                    <form class="" action="index.html" method="post">
+                    <form class="" action="<?php echo base_url() ?>login/execLogin" autocomplete="off" method="post">
                       <div class="row">
                         <div class="col-12 text-center">
                           <p class="h4 mt-3">Bem vindo! Entre com suas credenciais:</p>
@@ -27,22 +27,22 @@
                       <div class="row">
                         <div class="col-12">
                           <div class="form-group">
-                            <label class="bmd-label-floating">Username</label>
-                            <input type="text" class="form-control">
+                            <label class="bmd-label-floating">Usuário</label>
+                            <input type="text" name="usuario" autocomplete="off" required class="form-control">
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-12">
                           <div class="form-group">
-                            <label class="bmd-label-floating">Email address</label>
-                            <input type="email" class="form-control">
+                            <label class="bmd-label-floating">Senha</label>
+                            <input type="password" name="senha" required class="form-control">
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-8 offset-2 mt-5">
-                          <button class="btn btn-primary btn-block">Entrar</button>
+                          <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                         </div>
                       </div>
                     </form>
@@ -57,6 +57,11 @@
     </div>
   <?php include 'public/inc/scripts.php'; ?>
   <script>
+  <?php if(isset($_GET['invalid']) && $_GET['invalid'] == 'auth'){
+    ?>
+    sendAlert('Nome de usuário ou senha inválidos', 'danger');
+    <?php
+  } ?>
   </script>
 </body>
 
