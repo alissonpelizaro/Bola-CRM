@@ -10,8 +10,7 @@
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
                       <span class="nav-tabs-title text-center"><p>
-                        <img src="<?php echo base_url() ?>public/img/logo_white.png" alt="Bola de Neve" height="200px">
-                      </p>
+                        <img src="<?php echo base_url() ?>public/img/logo_white.png" alt="Bola de Neve" height="200px">                      </p>
                     </span>
                     </div>
                   </div>
@@ -21,7 +20,10 @@
                     <form class="" action="<?php echo base_url() ?>login/execLogin" autocomplete="off" method="post">
                       <div class="row">
                         <div class="col-12 text-center">
-                          <p class="h4 mt-3">Bem vindo! Entre com suas credenciais:</p>
+                          <p class="h4 mt-3">
+                            <b>Bem vindo!</b>
+                            <br>Entre com suas credenciais:
+                          </p>
                         </div>
                       </div>
                       <div class="row">

@@ -5,8 +5,8 @@
     Tip 2: you can also add an image using data-image tag
 -->
   <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-      Creative Tim
+    <a href="<?php echo base_url() ?>inicio" class="simple-text logo-normal">
+      <img src="<?php echo base_url(); ?>public/img/logo_black.png" height="80px" alt="Bola de Neve Araucária">
     </a>
   </div>
   <div class="sidebar-wrapper">
