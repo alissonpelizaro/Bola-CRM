@@ -204,9 +204,9 @@
 </div>
 <?php include 'public/inc/scripts.php'; ?>
 <script>
-$(document).ready( function () {
+$(document).ready( function (){
     $('#tableResult').DataTable();
-} );
+});
 </script>
 </body>
 
