@@ -6,7 +6,6 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <form>
         <div class="col-12">
           <div class="card">
             <div class="card-header card-header-tabs card-header-bdn">
@@ -60,7 +59,6 @@
             </div>
           </div>
         </div>
-      </form>
       </div>
     </div>
   </div>

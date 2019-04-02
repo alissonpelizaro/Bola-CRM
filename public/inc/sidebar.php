@@ -29,16 +29,22 @@
           <p>Meus cultos</p>
         </a>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="./typography.html">
+      <li class="nav-item <?php echo $page == 'mural' ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?php echo base_url() ?>mural">
           <i class="material-icons">calendar_today</i>
           <p>Gerenciar mural</p>
         </a>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="./icons.html">
-          <i class="material-icons">build</i>
-          <p>Cadastros</p>
+      <li class="nav-item <?php echo $page == 'pastores' ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?php echo base_url() ?>pastores">
+          <i class="material-icons">account_circle</i>
+          <p>Pastores</p>
+        </a>
+      </li>
+      <li class="nav-item <?php echo $page == 'usuarios' ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?php echo base_url() ?>usuarios">
+          <i class="material-icons">person</i>
+          <p>Usuários</p>
         </a>
       </li>
     </ul>
