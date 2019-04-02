@@ -19,6 +19,7 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url() ?>public/demo/demo.css" rel="stylesheet" />
   <!-- <link href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" /> -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 
 

@@ -5,6 +5,7 @@
 <script src="<?php echo base_url() ?>public/js/plugins/perfect-scrollbar.jquery.min.js"></script>
 <!-- Plugin for the momentJs  -->
 <script src="<?php echo base_url() ?>public/js/plugins/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <!--  Plugin for Sweet Alert -->
 <script src="<?php echo base_url() ?>public/js/plugins/sweetalert2.js"></script>
 <!-- Forms Validations Plugin -->
