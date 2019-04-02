@@ -29,6 +29,12 @@
           <p>Meus cultos</p>
         </a>
       </li>
+      <li class="nav-item <?php echo $page == 'escalas' ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?php echo base_url() ?>escalas">
+          <i class="material-icons">list</i>
+          <p>Escalas</p>
+        </a>
+      </li>
       <li class="nav-item <?php echo $page == 'mural' ? 'active' : ''; ?>">
         <a class="nav-link" href="<?php echo base_url() ?>mural">
           <i class="material-icons">calendar_today</i>
