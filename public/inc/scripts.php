@@ -44,6 +44,6 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="<?php echo base_url() ?>public/demo/demo.js"></script>
 <script src="<?php echo base_url() ?>public/js/base.template.js"></script>
-<script src="<?php echo base_url() ?>public/js/my_scripts.js"></script>
+<script src="<?php echo base_url() ?>public/js/lib/jquery.switcher/jquery.switcher.min.js"></script>
 
 <script src="<?php echo base_url() ?>public/js/my_scripts.js"></script>

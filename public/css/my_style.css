@@ -1,0 +1,15 @@
+.hide {
+  display: none;
+}
+
+.postitColorItem{
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+  display: inline-block;
+  transition-duration: 0.5s;
+}
+
+.postitColorItem:hover{
+  box-shadow: 1px 1px 4px black;
+}
