@@ -75,38 +75,20 @@
               <div class="tab-content">
                 <div class="tab-pane active" id="profile">
                   <div class="row">
-                    <div class="col-xl-4 col-md-6 col-sm-12">
-                      <div class="card mb-2 mt-2 bg-info">
+				  <?php 
+				  foreach ($lembretes as $lembrete){
+				  ?>
+					<div class="col-xl-4 col-md-12">
+                      <div class="card mb-2 mt-2 bg-<?php echo $lembrete->cor; ?>">
                         <div class="card-body">
-                          <h4>Titudo do postit</h4>
-                          <p>Conteudo do postit</p>
+                          <h4><?php echo $lembrete->titulo; ?></h4>
+                          <p><?php echo $lembrete->conteudo; ?></p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-sm-12">
-                      <div class="card mb-2 mt-2 bg-rose">
-                        <div class="card-body">
-                          <h4>Titudo do postit</h4>
-                          <p>Conteudo do postit</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-sm-12">
-                      <div class="card mb-2 mt-2 bg-primary">
-                        <div class="card-body">
-                          <h4>Titudo do postit</h4>
-                          <p>Conteudo do postit</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-sm-12">
-                      <div class="card mb-2 mt-2 bg-success">
-                        <div class="card-body">
-                          <h4>Titudo do postit</h4>
-                          <p class="mt-0">Conteudo do postit</p>
-                        </div>
-                      </div>
-                    </div>
+				  <?php
+				  }
+				  ?>
                   </div>
                 </div>
               </div>
@@ -201,7 +183,8 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="<?php echo base_url() ?>lembretes/novolembrete/inicio" method="post">
+        <form action="<?php echo base_url() ?>lembretes/novoLembrete" method="post">
+		  <input type="hidden" name="origin" value="home">
           <div class="modal-body">
             <div class="row">
               <div class="col-12">
@@ -244,7 +227,7 @@
               <div class="col-md-9 mt-2 hide" id="postitNotifyContent">
                 <div class="form-group bmd-form-group">
                   <label class="bmd-label-floating">Data do alerta:</label>
-                  <input type="dates" class="date-mask form-control dateRangerTime" placeholder="">
+                  <input type="dates" name="alerta" class="date-mask form-control dateRangerTime" placeholder="">
                 </div>
               </div>
             </div>
