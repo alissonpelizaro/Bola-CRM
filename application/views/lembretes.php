@@ -12,7 +12,7 @@
               <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
                   <h4 class="card-title">Meus lembretes
-                    <a href="#" class="pull-right m-0" style="font-size: 28px;"><b>+</b></a>
+                    <a href="#" class="pull-right m-0" style="font-size: 28px;" data-toggle="modal" data-target="#lembretesModal"><b>+</b></a>
                   </h4>
                 </div>
               </div>
@@ -20,39 +20,13 @@
             <div class="card-body">
               <div class="tab-content">
                 <div class="tab-pane active" id="profile">
-                  <div class="row">
-                    <div class="col-xl-4 col-md-6 col-sm-12">
-                      <div class="card mb-2 mt-2 bg-info">
-                        <div class="card-body">
-                          <h4>Titudo do postit</h4>
-                          <p>Conteudo do postit</p>
-                        </div>
+                  <div class="row" id="LembretesLoading">
+                    <div class='col-sm-12'>
+                      <div class="loading-spinner">
                       </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-sm-12">
-                      <div class="card mb-2 mt-2 bg-rose">
-                        <div class="card-body">
-                          <h4>Titudo do postit</h4>
-                          <p>Conteudo do postit</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-sm-12">
-                      <div class="card mb-2 mt-2 bg-primary">
-                        <div class="card-body">
-                          <h4>Titudo do postit</h4>
-                          <p>Conteudo do postit</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-sm-12">
-                      <div class="card mb-2 mt-2 bg-success">
-                        <div class="card-body">
-                          <h4>Titudo do postit</h4>
-                          <p class="mt-0">Conteudo do postit</p>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="row" id="LembretesLista">
                   </div>
                 </div>
               </div>
@@ -62,10 +36,12 @@
       </div>
     </div>
   </div>
+  <?php include 'public/inc/components/lembretes_edicao_modal.php'; ?>
   <?php include 'public/inc/footer.php'; ?>
 </div>
 <?php include 'public/inc/scripts.php'; ?>
 <script>
+  Lembretes.init();
 </script>
 </body>
 

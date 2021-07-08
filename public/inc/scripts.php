@@ -45,5 +45,23 @@
 <script src="<?php echo base_url() ?>public/demo/demo.js"></script>
 <script src="<?php echo base_url() ?>public/js/base.template.js"></script>
 <script src="<?php echo base_url() ?>public/js/lib/jquery.switcher/jquery.switcher.min.js"></script>
+<script>
+    var base_url = "<?php echo base_url() ?>";
+</script>
 
-<script src="<?php echo base_url() ?>public/js/my_scripts.js"></script>
+<?php
+include "auto_include.php";
+
+$relativePath = getRelativeFile();
+
+foreach ($loadScripts as $page => $loader) {
+
+    if ($page == $relativePath || $page == '_default') {
+        $v = "?v=" . $loader['version'];
+        foreach ($loader['files'] as $file) {
+?><script src="<?php echo base_url() ?>public/js/<?php echo $file . $v; ?>"></script>
+<?php
+        }
+    }
+}
+?>

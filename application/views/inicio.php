@@ -66,7 +66,7 @@
               <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
                   <h4 class="card-title">Meus lembretes
-                    <a href="#" class="pull-right m-0" style="font-size: 28px;" data-toggle="modal" data-target="#exampleModal"><b>+</b></a>
+                    <a href="#" class="pull-right m-0" style="font-size: 28px;" data-toggle="modal" data-target="#lembretesModal"><b>+</b></a>
                   </h4>
                 </div>
               </div>
@@ -74,21 +74,13 @@
             <div class="card-body">
               <div class="tab-content">
                 <div class="tab-pane active" id="profile">
-                  <div class="row">
-				  <?php 
-				  foreach ($lembretes as $lembrete){
-				  ?>
-					<div class="col-xl-4 col-md-12">
-                      <div class="card mb-2 mt-2 bg-<?php echo $lembrete->cor; ?>">
-                        <div class="card-body">
-                          <h4><?php echo $lembrete->titulo; ?></h4>
-                          <p><?php echo $lembrete->conteudo; ?></p>
-                        </div>
+                  <div class="row" id="LembretesLoading">
+                    <div class='col-sm-12'>
+                      <div class="loading-spinner">
                       </div>
                     </div>
-				  <?php
-				  }
-				  ?>
+                  </div>
+                  <div class="row" id="LembretesLista">
                   </div>
                 </div>
               </div>
@@ -173,92 +165,13 @@
       </div>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Novo lembrete</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <form action="<?php echo base_url() ?>lembretes/novoLembrete" method="post">
-		  <input type="hidden" name="origin" value="home">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group bmd-form-group">
-                  <label class="bmd-label-floating">Título (opcional):</label>
-                  <input type="text" name="titulo" class="form-control">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <div class="form-group bmd-form-group">
-                    <label class="bmd-label-floating">Conteúdo do lembrete:</label>
-                    <textarea class="form-control" required name="conteudo" rows="3"></textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <label for="checkPostitNotify">Cor do postit:</label><br>
-                <span class="postitColorItem card m-0 bg-bdn" onclick="setPostitColor(this, 'bdn')"></span>
-                <span class="postitColorItem card m-0 bg-warning" onclick="setPostitColor(this, 'warning')"></span>
-                <span class="postitColorItem card m-0 bg-danger" onclick="setPostitColor(this, 'danger')"></span>
-                <span class="postitColorItem card m-0 bg-rose" onclick="setPostitColor(this, 'rose')"></span>
-                <span class="postitColorItem card m-0 bg-primary" onclick="setPostitColor(this, 'primary ')"></span>
-                <span class="postitColorItem card m-0 bg-info" onclick="setPostitColor(this, 'info')"></span>
-                <span class="postitColorItem card m-0 bg-success" onclick="setPostitColor(this, 'success')"></span>
-                <input type="hidden" name="color" id="postitColorInput" value="bdn">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3">
-                <div class="form-group bmd-form-group mt-0">
-                  <label for="checkPostitNotify">Ativar alerta?</label><br>
-                  <input type="checkbox" id="checkPostitNotify" value="1" class="form-control">
-                </div>
-              </div>
-              <div class="col-md-9 mt-2 hide" id="postitNotifyContent">
-                <div class="form-group bmd-form-group">
-                  <label class="bmd-label-floating">Data do alerta:</label>
-                  <input type="dates" name="alerta" class="date-mask form-control dateRangerTime" placeholder="">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary">Salvar</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+
+  <?php include 'public/inc/components/lembretes_edicao_modal.php'; ?>
   <?php include 'public/inc/footer.php'; ?>
 </div>
 <?php include 'public/inc/scripts.php'; ?>
 <script>
-
-$('#checkPostitNotify').change(function(){
-  if($(this).is(':checked')){
-    $("#postitNotifyContent").removeClass('hide');
-  } else {
-    $("#postitNotifyContent").addClass('hide');
-  }
-});
-
-function setPostitColor(element, color){
-  $(".postitColorItem").css('opacity', 0.5);
-  $(element).css('opacity', 1);
-  $("#postitColorInput").val(color);
-}
-
+  Lembretes.init();
 </script>
 </body>
 

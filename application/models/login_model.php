@@ -13,6 +13,7 @@ class Login_model extends My_model {
 		$this->db->from('user');
 		$this->db->where('login', $user);
 		$this->db->where('senha', $pass);
+		$this->db->where('status', 1);
 
 		$ret = $this->db->get()->result();
 

@@ -14,7 +14,7 @@
     opacity: 0;
     transition: opacity, transform .2s ease;
     @include transform-translate-y(5px);
-    font-size: $tooltip-font-size;
+    font-size: 5px;
 
     &.bs-tooltip-top,
     &.bs-tooltip-auto[x-placement^="top"]{
@@ -44,6 +44,6 @@
 }
 
 .tooltip-inner{
-    padding: 10px 15px;
+    padding: 4px 7px;
     min-width: 130px;
 }
