@@ -6,6 +6,7 @@ $loadScripts = [
         'version' => '1',
         'files' => [
             'my_scripts.js',
+            'date-listeners.js',
             'listeners.js'
         ]
     ],
@@ -13,13 +14,20 @@ $loadScripts = [
     'inicio' => [
         'version' => '1',
         'files' => [
-            'lembretes.js'
+            'lembretes.js',
+            'mural.js'
         ]
     ],
     'lembretes' => [
         'version' => '1',
         'files' => [
             'lembretes.js'
+        ]
+    ],
+    'mural' => [
+        'version' => '1',
+        'files' => [
+            'mural.js'
         ]
     ],
 ];
