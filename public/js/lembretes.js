@@ -164,7 +164,7 @@ Lembretes = {
                 method: "POST",
                 url: base_url + "lembretes/delete/"+Lembretes.lembreteAtivo,
                 beforeSend: function () {
-                    $('#lembreteConfirmacaoModal').modal('hide')
+                    $('#lembreteConfirmacaoModal').modal('hide');
                 },
                 success: function (data) {
                     if (data == 'deleted') {

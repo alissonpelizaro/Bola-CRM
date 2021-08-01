@@ -36,47 +36,6 @@ $(".block-keyboard").keydown(function (event) {
   return false;
 });
 
-$('.dateRangerTime').daterangepicker({
-  singleDatePicker: true,
-  timePicker: true,
-  timePicker24Hour: true,
- 
-  locale: {
-    format: 'DD/MM/YYYY HH:mm',
-    "applyLabel": "Aplicar",
-    "cancelLabel": "Cancelar",
-    "fromLabel": "De",
-    "toLabel": "Para",
-    "customRangeLabel": "Custom",
-    "weekLabel": "W",
-    "daysOfWeek": [
-      "Do",
-      "Se",
-      "Te",
-      "Qu",
-      "Qu",
-      "Se",
-      "Sa"
-    ],
-    "monthNames": [
-      "Janeiro",
-      "Fevereiro",
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro",
-      "Outubro",
-      "Novembro",
-      "Dezembro"
-    ],
-    "firstDay": 1
-  },
-});
-
-
 function dateSqlToHtml(date){
   if (date == ''){
     return date;

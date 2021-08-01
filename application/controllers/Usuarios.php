@@ -12,4 +12,15 @@ class Usuarios extends CI_Controller {
 	}
 
 
+	public function obtemLista($lista = ""){
+		$this->load->library('core_lib');
+		$this->load->model('user_model');
+
+		$lista = $this->user_model->obtemLista(explode(',', $lista));
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($lista));
+	}
+
+
 }
